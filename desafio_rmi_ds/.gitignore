@@ -1,0 +1,11 @@
+
+target/
+dbt_packages/
+logs/
+.env
+.user.yml
+data/aluno
+data/avaliacao
+data/escola
+data/frequencia
+data/turma

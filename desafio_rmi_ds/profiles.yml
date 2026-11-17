@@ -1,0 +1,10 @@
+desafio_rmi_ds:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: desafio-rmi-ds-515012
+      dataset: analytics
+      threads: 4
+      location: southamerica-east1
