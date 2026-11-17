@@ -3,12 +3,12 @@ WITH source AS (
         FROM {{ source('raw', 'frequencia') }}
 )
 
-SELECT CAST(id_escola AS INTEGER) AS id_escola, 
-        id_aluno, 
-        CAST(id_turma AS INTEGER) AS id_turma, 
-        CAST(data_inicio AS STRING) AS data_inicio, 
-        CAST(data_fim AS STRING) AS data_fim,
-        CAST(disciplina AS STRING) AS disciplina, 
+SELECT CAST(id_escola    AS INTEGER) AS id_escola, 
+        CAST(id_aluno    AS STRING)  AS id_aluno, 
+        CAST(id_turma    AS INTEGER) AS id_turma, 
+        CAST(data_inicio AS STRING)  AS data_inicio, 
+        CAST(data_fim    AS STRING)  AS data_fim,
+        CAST(disciplina  AS STRING)  AS disciplina, 
         SAFE_CAST(frequencia AS FLOAT64) AS frequencia
     FROM source
     WHERE id_escola IS NOT NULL

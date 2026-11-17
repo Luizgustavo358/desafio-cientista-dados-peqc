@@ -3,7 +3,7 @@ WITH source AS (
         FROM {{ source('raw', 'avaliacao') }}
 )
 
-SELECT id_aluno,
+SELECT CAST(id_aluno  AS STRING)  AS id_aluno,
         CAST(id_turma AS INTEGER) AS id_turma,
         SAFE_CAST(frequencia AS FLOAT64) AS frequencia,
         CAST(bimestre AS INTEGER) AS bimestre,
